@@ -88,3 +88,61 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+
+
+// MQTT 
+
+var mosca = require('mosca');
+var mqtt = require('mqtt')
+
+//mqtt server
+var ascoltatore = {
+  //using ascoltatore
+  //type: 'mongo',
+  //url: 'mongodb://localhost:27017/mqtt',
+  //pubsubCollection: 'ascoltatori',
+  //mongo: {}
+};
+
+var settings = {
+  port: 18886,
+  backend: ascoltatore
+};
+
+var mqserver = new mosca.Server(settings);
+
+mqserver.on('clientConnected', function (client) {
+  console.log('client connected', client.id);
+});
+
+// fired when a message is received
+mqserver.on('published', function (packet, client) {
+  console.log('Published', packet.payload);
+
+});
+
+mqserver.on('ready', setup);
+
+// fired when the mqtt server is ready
+function setup() {
+  console.log('Mosca server is up and running on %d', settings.port);
+}
+//client
+var client = mqtt.connect('tcp://127.0.0.1:18886')
+
+client.on('connect', function () {
+  client.subscribe('ota_pub')
+})
+
+client.on('message', function (topic, message) {
+  // message is Buffer
+  console.log(message.toString())
+  if (message.toString() == '升级可以开始了吗') {
+    client.publish('ota_sub', '升级可以开始了！')
+    app.get('/', function (req, res) {
+      res.send(message.toString());
+    });
+
+  }
+  // client.end()
+})
