@@ -9,6 +9,16 @@ var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 
 var app = express();
+const fileUpload = require('express-fileupload');
+
+// default options
+app.use(fileUpload({
+  // useTempFiles : true,
+  // tempFileDir : 'c:',
+  // debug:true,
+  // uriDecodeFileNames:true,
+  // safeFileNames:true,
+}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

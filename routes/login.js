@@ -1,5 +1,9 @@
 var express = require('express');
 var router = express.Router();
+
+var multer = require('multer')
+var fs = require('fs');
+
 var bodyParser = require('body-parser');
 
 
@@ -24,9 +28,23 @@ router.post('/login', function (req, res, next) {
     }
 });
 router.post('/upload', function (req, res, next) {
-
-        // showMessage("上传完成",res)
+    if (!req.files || Object.keys(req.files).length === 0) {
+        return res.status(400).send('No files were uploaded.');
+      }
     console.log("上传完成");
+    console.log(req.files); // the uploaded file object
+    console.log(req.files.firewareupload); // the uploaded file object
+  // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
+  let firewareupload = req.files.firewareupload;
+
+  // Use the mv() method to place the file somewhere on your server
+  firewareupload.mv('./caonima.bin', function(err) {
+    if (err)
+      return res.status(500).send(err);
+
+      res.send("完成上传");
+  });
+
 
 });
 
