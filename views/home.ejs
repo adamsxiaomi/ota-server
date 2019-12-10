@@ -55,8 +55,10 @@
                         rtl: true,
                         dropZoneEnabled: false,
                         allowedFileExtensions: ["bin"],
-                        uploadUrl: 'http://172.16.0.224:3000/upload',
-                        typ: 'POST'
+                        uploadUrl: '/upload',
+                        typ: 'POST',
+                        enctype: 'multipart/form-data'
+                        
                     });
                 });
 </script>
