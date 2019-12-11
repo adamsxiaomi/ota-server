@@ -1,15 +1,18 @@
 var express = require('express');
 var router = express.Router();
-
 var multer = require('multer')
 var fs = require('fs');
 
-var bodyParser = require('body-parser');
+// var bodyParser = require('body-parser');
 
 
 /* GET login page. */
 router.get('/home', function (req, res, next) {
     res.render('home', { title: 'Express' });
+});
+
+router.get('/firewareManage', function (req, res, next) {
+    res.render('firewareManage', { title: 'firewareManage' });
 });
 //封装函数
 function showMessage(message,res){
@@ -38,11 +41,10 @@ router.post('/upload', function (req, res, next) {
   let firewareupload = req.files.firewareupload;
 
   // Use the mv() method to place the file somewhere on your server
-  firewareupload.mv('./caonima.bin', function(err) {
+  firewareupload.mv('./tmp/' + req.files.firewareupload.name, function(err) {
     if (err)
       return res.status(500).send(err);
-
-      res.send("完成上传");
+      return res.json("｛2：1}");
   });
 
 
