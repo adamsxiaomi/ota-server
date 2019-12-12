@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <!-- release v5.0.8, copyright 2014 - 2019 Kartik Visweswaran -->
 <!--suppress JSUnresolvedLibraryURL -->
-<html lang="zh">
+<html lang="zh-CH">
 
 <!-- bootstrap -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js" integrity="sha384-L2pyEeut/H3mtgCBaUNw7KWzp5n9+4pDQiExs933/5QfaTh8YStYFFkOzSoXjlTb" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"
+    integrity="sha384-L2pyEeut/H3mtgCBaUNw7KWzp5n9+4pDQiExs933/5QfaTh8YStYFFkOzSoXjlTb"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 <!-- bootstrap -->
 
 
@@ -23,8 +30,10 @@
 <script src="/js/locales/zh.js" type="text/javascript"></script>
 <script src="/themes/fas/theme.js" type="text/javascript"></script>
 <script src="/themes/explorer-fas/theme.js" type="text/javascript"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
 <!-- bootstrap-fileinput -->
 
@@ -38,165 +47,190 @@
 
 </head>
 
+<style>
+    /* body {
+        background-color: #C0C0C0;
+    } */
+
+    .btn-style {
+        position: absolute;
+        right: 200px;
+        top: 90px;
+    }
+
+    .btn2-style {
+        position: absolute;
+        right: 300px;
+        top: 90px;
+    }
+
+    .form-style {
+        position: absolute;
+        top: 140px;
+    }
+</style>
+
 <body>
     <!--Body content-->
     <!-- 导航 start -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-dark bg-dark ">
         <div class="container-fluid  navbar-fixed-top">
-        <a class="navbar-brand" href="#">Device</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">主页 <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/firewareManage">固件管理</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        日志分析
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
+            <a class="navbar-brand" href="#">Device</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">主页 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/firewareManage">固件管理</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            日志分析
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
         </div>
     </nav>
     <!-- 导航 end -->
-    <div style="padding: 50px 1800px 0px;">
-        <div class="form-group">
-            <button type="submit" class="btn btn-success btn-sm "> 升级 </button>
-        </div>
+
+    <!-- <div class="form-group"> -->
+    <button type="submit" class="btn btn-success btn-sm btn-style"> 升级 </button>
+    <!-- </div> -->
     </div>
     <!-- 表格 end -->
-    <div style="padding: 0px 0px 0px;">
     <form>
         <div class="container-fluid ">
-        <form class="form" role="form">
-        <table class="table table-bordered text-dark">
-        <thead>
-        <tr>
-            <th style = 'text-align: center;' scope="col"></th>
-            <th style = 'text-align: center;' scope="col">设备类型</th>
-            <th style = 'text-align: center;' scope="col">设备地址</th>
-            <th style = 'text-align: center;' scope="col">设备状态</th>
-            <th style = 'text-align: center;' scope="col">固件版本</th>
-            <th style = 'text-align: center;' scope="col">操作</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th style = 'text-align: center;' scope="row">1</th>
-            <td style = 'text-align: center;' > 边缘路由</td>
-            <td style = 'text-align: center;' > 0100124B0012485555</td>
-            <td style = 'text-align: center;' > online</td>
-            <td></td>
-            <td style = 'text-align: center;' > <input type="checkbox" class="checkbox-inline" id="exampleCheck1"></td>
-        </tr>
-        <tr>
-            <th style = 'text-align: center;' scope="row">2</th>
-            <td style = 'text-align: center;' > 水浸传感器</td>
-            <td style = 'text-align: center;' > 0100124B0012485555</td>
-            <td style = 'text-align: center;' > offline</td>
-            <td></td>
-            <td style = 'text-align: center;' > <input type="checkbox" class="checkbox-inline" id="exampleCheck1"></td>
-        </tr>
-        <tr>
-            <th style = 'text-align: center;' scope="row">3</th>
-            <td style = 'text-align: center;' > 子路由</td>
-            <td style = 'text-align: center;' > 0100124B0012485555</td>
-            <td style = 'text-align: center;' > offline</td>
-            <td></td>
-            <td style = 'text-align: center;' > <input type="checkbox" class="checkbox-inline" id="exampleCheck1"></td>
-        </tr>
-        </tbody>
-    </table>
-    </div>
-    </div>
+            <form class="form" role="form">
+                <table class="table table-bordered text-dark form-style">
+                    <thead>
+                        <tr>
+                            <th style='text-align: center;' scope="col"></th>
+                            <th style='text-align: center;' scope="col">设备类型</th>
+                            <th style='text-align: center;' scope="col">设备地址</th>
+                            <th style='text-align: center;' scope="col">设备状态</th>
+                            <th style='text-align: center;' scope="col">固件版本</th>
+                            <th style='text-align: center;' scope="col">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th style='text-align: center;' scope="row">1</th>
+                            <td style='text-align: center;'> 边缘路由</td>
+                            <td style='text-align: center;'> 0100124B0012485555</td>
+                            <td style='text-align: center;'> online</td>
+                            <td></td>
+                            <td style='text-align: center;'> <input type="checkbox" class="checkbox-inline"
+                                    id="exampleCheck1"></td>
+                        </tr>
+                        <tr>
+                            <th style='text-align: center;' scope="row">2</th>
+                            <td style='text-align: center;'> 水浸传感器</td>
+                            <td style='text-align: center;'> 0100124B0012485555</td>
+                            <td style='text-align: center;'> offline</td>
+                            <td></td>
+                            <td style='text-align: center;'> <input type="checkbox" class="checkbox-inline"
+                                    id="exampleCheck1"></td>
+                        </tr>
+                        <tr>
+                            <th style='text-align: center;' scope="row">3</th>
+                            <td style='text-align: center;'> 子路由</td>
+                            <td style='text-align: center;'> 0100124B0012485555</td>
+                            <td style='text-align: center;'> offline</td>
+                            <td></td>
+                            <td style='text-align: center;'> <input type="checkbox" class="checkbox-inline"
+                                    id="exampleCheck1"></td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
 
 
     </form>
     <!-- 表格 end -->
-<!--    <template id="firewareManage">-->
+    <!--    <template id="firewareManage">-->
     <!-- 固件上传 start -->
-        <div class="row-fluid">
-            <div class="span2">
-            </div>
-            <div class="span6">
-                <div style="padding: 50px 1800px 0px;">
-                <!-- 按钮触发   -->
-                <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">固件上传</button>
-                </div>
-                <!-- 模态框（Modal） -->
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <!-- 表单 -->
-                                <form class="form-horizontal" role="form">
-                                    <div class="form-group">
-                                        <label for="version" class="col-sm-5 control-label">版本号</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="version" placeholder="版本号">
-                                        </div>
-                                        <label for="devType" class="col-sm-5 control-label">设备类型</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="devType" placeholder="设备类型">
-                                        </div>
-                                    </div>
-
-                                    <div dir=rtl class="file-loading">
-                                        <!-- note the direction if you want to display file-loading indicator -->
-                                        <!-- note that your input must just set the `rtl` data property of the plugin or in your javascript code -->
-                                        <input id="firewareupload" name="firewareupload" type="file" multiple>
-                                    </div>
-                                    <script>
-                                        $(document).ready(function () {
-                                            $("#firewareupload").fileinput({
-                                                language: 'zh',
-                                                rtl: true,
-                                                dropZoneEnabled: true,
-                                                allowedFileExtensions: ['bin','jpg'],
-                                                uploadUrl: '/upload',
-                                                typ: 'POST',
-                                                enctype: 'multipart/form-data',
-                                                theme: 'fa',
-                                                showUpload: true,
-                                                showPreview: true,
-                                                maxFilePreviewSize: 1024,
-
-                                            });
-                                        });
-                                    </script>
-                                </form>
-                            </div>
-                        </div><!-- /.modal-content -->
-                    </div><!-- /.modal -->
-                </div>
-            </div>
-            <div class="span4">
-            </div>
+    <div class="row-fluid">
+        <div class="span2">
         </div>
+        <div class="span6">
+            <!-- 按钮触发   -->
+            <button class="btn btn-success btn-sm btn2-style" data-toggle="modal" data-target="#myModal">固件上传</button>
+        </div>
+        <!-- 模态框（Modal） -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- 表单 -->
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="version" class="col-sm-5 control-label">版本号</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="version" placeholder="版本号">
+                                </div>
+                                <label for="devType" class="col-sm-5 control-label">设备类型</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="devType" placeholder="设备类型">
+                                </div>
+                            </div>
+
+                            <div dir=rtl class="file-loading">
+                                <!-- note the direction if you want to display file-loading indicator -->
+                                <!-- note that your input must just set the `rtl` data property of the plugin or in your javascript code -->
+                                <input id="firewareupload" name="firewareupload" type="file" multiple>
+                            </div>
+                            <script>
+                                $(document).ready(function () {
+                                    $("#firewareupload").fileinput({
+                                        language: 'zh',
+                                        rtl: true,
+                                        dropZoneEnabled: true,
+                                        allowedFileExtensions: ['bin', 'jpg'],
+                                        uploadUrl: '/upload',
+                                        typ: 'POST',
+                                        enctype: 'multipart/form-data',
+                                        theme: 'fa',
+                                        showUpload: true,
+                                        showPreview: true,
+                                        maxFilePreviewSize: 1024,
+
+                                    });
+                                });
+                            </script>
+                        </form>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+    </div>
+    <div class="span4">
+    </div>
+    </div>
     </div>
     </div>
     <!-- 固件上传 end -->
-<!--    </template>-->
+    <!--    </template>-->
 
 
 </body>
