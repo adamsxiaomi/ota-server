@@ -7,14 +7,14 @@
     ],
     "description": "An enhanced HTML 5 file input for Bootstrap 3.x with file preview, multiple selection, ajax uploads, and more features.",
     "main": [
-        "./css/fileinput.min.css",
+        "./css/fileinput.min.css"
         "./js/fileinput.min.js"
     ],
     "keywords": [
         "bootstrap",
         "file",
         "input",
-        "preview",
+        "preview",,
         "image",
         "upload",
         "ajax",

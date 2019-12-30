@@ -90,7 +90,7 @@ function onListening() {
 }
 
 
-// MQTT 
+// MQTT
 
 var mosca = require('mosca');
 var mqtt = require('mqtt')
@@ -128,21 +128,34 @@ function setup() {
   console.log('Mosca server is up and running on %d', settings.port);
 }
 //client
-var client = mqtt.connect('tcp://127.0.0.1:18886')
+// var client = mqtt.connect('tcp://127.0.0.1:18886')
+//
+// client.on('connect', function () {
+//   client.subscribe('ota_pub')
+// })
+//
+// client.on('message', function (topic, message) {
+//   // message is Buffer
+//   console.log(message.toString())
+//   if (message.toString() == '升级可以开始了吗') {
+//     client.publish('ota_sub', '升级可以开始了！');
+//     app.get('/', function (req, res) {
+//       res.send(message.toString());
+//     });
+//
+//   }
+//   // client.end()
+// })
 
-client.on('connect', function () {
-  client.subscribe('ota_pub')
-})
 
-client.on('message', function (topic, message) {
-  // message is Buffer
-  console.log(message.toString())
-  if (message.toString() == '升级可以开始了吗') {
-    client.publish('ota_sub', '升级可以开始了！')
-    app.get('/', function (req, res) {
-      res.send(message.toString());
-    });
 
-  }
-  // client.end()
-})
+//mongodb
+
+// var MongoClient = require('mongodb').MongoClient;
+// var url = "mongodb://localhost:27017/runoob";
+
+// MongoClient.connect(url, { useNewUrlParser: true }, function (err, db) {
+//   if (err) throw err;
+//   console.log("数据库已创建!");
+//   db.close();
+// });

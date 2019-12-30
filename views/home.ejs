@@ -48,9 +48,9 @@
 </head>
 
 <style>
-    /* body {
-        background-color: #C0C0C0;
-    } */
+    body {
+        background-color: #F7FFFA;
+    }
 
     .btn-style {
         position: absolute;
@@ -114,13 +114,15 @@
     <!-- 导航 end -->
 
     <!-- <div class="form-group"> -->
-    <button type="submit" class="btn btn-success btn-sm btn-style"> 升级 </button>
+
+
     <!-- </div> -->
     </div>
     <!-- 表格 end -->
     <form>
         <div class="container-fluid ">
-            <form class="form" role="form">
+            <!-- 表单 -->
+            <form class="form-horizontal"  action="/update" method="post" role="form">
                 <table class="table table-bordered text-dark form-style">
                     <thead>
                         <tr>
@@ -136,7 +138,7 @@
                         <tr>
                             <th style='text-align: center;' scope="row">1</th>
                             <td style='text-align: center;'> 边缘路由</td>
-                            <td style='text-align: center;'> 0100124B0012485555</td>
+                            <td style='text-align: center;'> 0100124B0013A4BE48</td>
                             <td style='text-align: center;'> online</td>
                             <td></td>
                             <td style='text-align: center;'> <input type="checkbox" class="checkbox-inline"
@@ -144,8 +146,8 @@
                         </tr>
                         <tr>
                             <th style='text-align: center;' scope="row">2</th>
-                            <td style='text-align: center;'> 水浸传感器</td>
-                            <td style='text-align: center;'> 0100124B0012485555</td>
+                            <td style='text-align: center;'> 子路由</td>
+                            <td style='text-align: center;'> 0100124B001975FA33</td>
                             <td style='text-align: center;'> offline</td>
                             <td></td>
                             <td style='text-align: center;'> <input type="checkbox" class="checkbox-inline"
@@ -154,7 +156,25 @@
                         <tr>
                             <th style='text-align: center;' scope="row">3</th>
                             <td style='text-align: center;'> 子路由</td>
-                            <td style='text-align: center;'> 0100124B0012485555</td>
+                            <td style='text-align: center;'> 0100124B0019760590</td>
+                            <td style='text-align: center;'> offline</td>
+                            <td></td>
+                            <td style='text-align: center;'> <input type="checkbox" class="checkbox-inline"
+                                    id="exampleCheck1"></td>
+                        </tr>
+                        <tr>
+                            <th style='text-align: center;' scope="row">4</th>
+                            <td style='text-align: center;'> 子路由</td>
+                            <td style='text-align: center;'> 0100124B00197605E7</td>
+                            <td style='text-align: center;'> offline</td>
+                            <td></td>
+                            <td style='text-align: center;'> <input type="checkbox" class="checkbox-inline"
+                                    id="exampleCheck1"></td>
+                        </tr>
+                        <tr>
+                            <th style='text-align: center;' scope="row">5</th>
+                            <td style='text-align: center;'> 子路由</td>
+                            <td style='text-align: center;'> 0100124B0017B0FBBC</td>
                             <td style='text-align: center;'> offline</td>
                             <td></td>
                             <td style='text-align: center;'> <input type="checkbox" class="checkbox-inline"
@@ -163,7 +183,34 @@
                     </tbody>
                 </table>
         </div>
+        <input type="submit" value="提交" />
 
+        <button type="submit" id="btn_update" name="btn_update" class="btn btn-success btn-sm btn-style"> 升级 </button>
+        <script>
+            $(function () {
+                $("#btn_update").click(function () {
+                    $.ajax({
+                        //要用post方式
+                        type: "Post",
+                        //方法所在页面和方法名
+                        url: "/update",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (data) {
+                            //返回的数据用data.d获取内容
+                            alert("操作成功");
+                            // alert(data);
+                        },
+                        error: function (err) {
+                            alert(err);
+                        }
+                    });
+
+                    //禁用按钮的提交
+                    return false;
+                });
+            });
+        </script>
 
     </form>
     <!-- 表格 end -->

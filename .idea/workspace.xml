@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bc217b5-21c7-487d-8ac1-f06076c68e4b" name="Default Changelist" comment="" />
+    <list default="true" id="0bc217b5-21c7-487d-8ac1-f06076c68e4b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/bin/www" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kartik-v-bootstrap-fileinput-a44c1ab/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/kartik-v-bootstrap-fileinput-a44c1ab/bower.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1UYPYZg2QlZ75awJ7ilw6dAjIGf" />
   <component name="ProjectViewState">
@@ -14,10 +25,17 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="NodeJSConfigurationType" nameIsGenerated="true" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -42,6 +60,9 @@
       <option name="presentableId" value="Default" />
       <updated>1575530604512</updated>
       <workItem from="1575530608253" duration="24483000" />
+      <workItem from="1576028807734" duration="5318000" />
+      <workItem from="1576034517698" duration="21420000" />
+      <workItem from="1576115171224" duration="14110000" />
     </task>
     <servers />
   </component>
@@ -49,14 +70,35 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2334" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576034358538">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2334" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576034358538" />
+    <state width="1899" height="882" key="GridCell.Tab.0.bottom" timestamp="1576034460268">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="882" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576034460268" />
+    <state width="1899" height="882" key="GridCell.Tab.0.center" timestamp="1576034460268">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="882" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576034460268" />
+    <state width="1899" height="882" key="GridCell.Tab.0.left" timestamp="1576034460268">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="882" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576034460268" />
+    <state width="1899" height="882" key="GridCell.Tab.0.right" timestamp="1576034460268">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="882" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576034460268" />
     <state x="648" y="146" key="SettingsEditor" timestamp="1575531007621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="648" y="146" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1575531007621" />
-    <state x="636" y="124" width="647" height="792" key="find.popup" timestamp="1575633823479">
+    <state x="636" y="124" width="1101" height="792" key="find.popup" timestamp="1576209676041">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="636" y="124" width="647" height="792" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1575633823479" />
+    <state x="636" y="124" width="1101" height="792" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1576209676041" />
+    <state x="2556" y="124" width="1101" height="792" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576058504164" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1575612697517">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
