@@ -51,8 +51,12 @@ function displayFile(param) {
 }
 
 router.post('/update', function (req, res, next) {
+    var pubStr;
     console.log("updateing");
-    client.publish('/ROUTING/3/0100124B0013A4BE48/ota/sub', '升级可以开始了！');
+    console.log(req.body.pass);
+    pubStr = '升级可以开始了！' + req.body.pass;
+    console.log("推送消息 %s",pubStr);
+    client.publish('/ROUTING/3/0100124B0013A4BE48/ota/sub', pubStr);
     return res.status(200).send("操作成功");
     // return res.end();
 });

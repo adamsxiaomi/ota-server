@@ -122,14 +122,15 @@
     <form>
         <div class="container-fluid ">
             <!-- 表单 -->
-            <form class="form-horizontal"  action="/update" method="post" role="form">
-                <table class="table table-bordered text-dark form-style">
+            <form class="form-horizontal" action="/update" method="post" role="form">
+                <table class="table table-bordered text-dark form-style " id="devlist">
                     <thead>
                         <tr>
                             <th style='text-align: center;' scope="col"></th>
                             <th style='text-align: center;' scope="col">设备类型</th>
                             <th style='text-align: center;' scope="col">设备地址</th>
                             <th style='text-align: center;' scope="col">设备状态</th>
+                            <th style='text-align: center;' scope="col">升级状态</th>
                             <th style='text-align: center;' scope="col">固件版本</th>
                             <th style='text-align: center;' scope="col">操作</th>
                         </tr>
@@ -139,73 +140,121 @@
                             <th style='text-align: center;' scope="row">1</th>
                             <td style='text-align: center;'> 边缘路由</td>
                             <td style='text-align: center;'> 0100124B0013A4BE48</td>
-                            <td style='text-align: center;'> online</td>
-                            <td></td>
-                            <td style='text-align: center;'> <input type="checkbox" class="checkbox-inline"
-                                    id="exampleCheck1"></td>
+                            <td style='text-align: center;'> online </td>
+                            <td style='text-align: center;'> 正常</td>
+                            <td style='text-align: center;' id="state"></td>
+                            <td style='text-align: center;'> <input type="checkbox" class="checkbox-inline" id="1"
+                                    name='updateCB' value='0100124B0013A4BE48'></td>
                         </tr>
                         <tr>
                             <th style='text-align: center;' scope="row">2</th>
                             <td style='text-align: center;'> 子路由</td>
                             <td style='text-align: center;'> 0100124B001975FA33</td>
                             <td style='text-align: center;'> offline</td>
-                            <td></td>
-                            <td style='text-align: center;'> <input type="checkbox" class="checkbox-inline"
-                                    id="exampleCheck1"></td>
+                            <td style='text-align: center;'> 正常</td>
+                            <td style='text-align: center;' id="state"></td>
+                            <td style='text-align: center;'> <input type="checkbox" class="checkbox-inline" id="2"
+                                    name='updateCB' value='0100124B001975FA33'> </td>
                         </tr>
                         <tr>
                             <th style='text-align: center;' scope="row">3</th>
                             <td style='text-align: center;'> 子路由</td>
                             <td style='text-align: center;'> 0100124B0019760590</td>
                             <td style='text-align: center;'> offline</td>
-                            <td></td>
-                            <td style='text-align: center;'> <input type="checkbox" class="checkbox-inline"
-                                    id="exampleCheck1"></td>
+                            <td style='text-align: center;'> 正常</td>
+
+                            <td style='text-align: center;' id="state"></td>
+                            <td style='text-align: center;'> <input type="checkbox" class="checkbox-inline" id="3"
+                                    name='updateCB' value='0100124B0019760590'></td>
                         </tr>
                         <tr>
                             <th style='text-align: center;' scope="row">4</th>
                             <td style='text-align: center;'> 子路由</td>
                             <td style='text-align: center;'> 0100124B00197605E7</td>
                             <td style='text-align: center;'> offline</td>
-                            <td></td>
-                            <td style='text-align: center;'> <input type="checkbox" class="checkbox-inline"
-                                    id="exampleCheck1"></td>
+                            <td style='text-align: center;'> 正常</td>
+                            <td style='text-align: center;' id="state"></td>
+                            <td style='text-align: center;'> <input type="checkbox" class="checkbox-inline" id="4"
+                                    name='updateCB' value='0100124B00197605E7'></td>
                         </tr>
                         <tr>
                             <th style='text-align: center;' scope="row">5</th>
                             <td style='text-align: center;'> 子路由</td>
                             <td style='text-align: center;'> 0100124B0017B0FBBC</td>
                             <td style='text-align: center;'> offline</td>
-                            <td></td>
-                            <td style='text-align: center;'> <input type="checkbox" class="checkbox-inline"
-                                    id="exampleCheck1"></td>
+                            <td style='text-align: center;'> 正常</td>
+                            <td style='text-align: center;' id="state"></td>
+                            <td style='text-align: center;'> <input type="checkbox" class="checkbox-inline" id="5"
+                                    name='updateCB' value='0100124B0017B0FBBC'></td>
+                        </tr>
+                        <tr>
+                            <th style='text-align: center;' scope="row">6</th>
+                            <td style='text-align: center;'> 子路由</td>
+                            <td style='text-align: center;'> 0100124B0019760930</td>
+                            <td style='text-align: center;'> offline</td>
+                            <td style='text-align: center;'> 正常</td>
+                            <td style='text-align: center;' id="state"></td>
+                            <td style='text-align: center;'> <input type="checkbox" class="checkbox-inline" id="6"
+                                    name='updateCB' value='0100124B0019760930'></td>
                         </tr>
                     </tbody>
                 </table>
         </div>
-        <input type="submit" value="提交" />
 
+        <!-- <input type="submit" value="提交" /> -->
         <button type="submit" id="btn_update" name="btn_update" class="btn btn-success btn-sm btn-style"> 升级 </button>
         <script>
+            var ckvalue = "adsfdsfs";
             $(function () {
                 $("#btn_update").click(function () {
+                    var atr = [];
+                    var checkBox = $('input[name="updateCB"]:checked');
+                    for (var i = 0; i < checkBox.length; i++) {
+                        atr[i] = checkBox[i].value;
+                    }
+                    console.log(checkBox);
+                    if (checkBox.length > 1) {
+                        alert("别选那么多设备");
+                        return;
+                    } else if (checkBox.length <= 0) {
+                        alert("请选择要升级设备！");
+                        return;
+                    }
+                    console.log(checkBox[0].id);
+                    if (confirm("确认要升级" + atr[0] + "吗")) {
+                        document.getElementById("devlist");
+                        if(devlist.rows[checkBox[0].id].cells[4].innerHTML == "正在升级")
+                        {
+                            alert("设备"+ atr[0] + "已经在升级了");
+                            return;
+                        }
+                        else{
+                            var oState = document.getElementById('state');
+                            oState.value = '正在升级';
+                            devlist.rows[checkBox[0].id].cells[4].innerHTML = oState.value;
+                        }
+                    } else {
+                        return;
+                    }
+
                     $.ajax({
                         //要用post方式
                         type: "Post",
                         //方法所在页面和方法名
                         url: "/update",
-                        contentType: "application/json; charset=utf-8",
-                        dataType: "json",
+                        data: {
+                            user: 'tes',
+                            pass: atr[0]
+                        },
                         success: function (data) {
                             //返回的数据用data.d获取内容
-                            alert("操作成功");
-                            // alert(data);
+                            // alert("操作成功");
+                            alert(data);
                         },
                         error: function (err) {
-                            alert(err);
+                            alert("操作失败");
                         }
                     });
-
                     //禁用按钮的提交
                     return false;
                 });
@@ -267,8 +316,10 @@
                             </script>
                         </form>
                     </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal -->
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal -->
         </div>
     </div>
     <div class="span4">
